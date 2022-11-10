@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCT INFORMATION</title>
+    <link rel="stylesheet" href="/css/product-info.css">
+</head>
+
+<body>
+    <div id="product-information">
+        <section class="product">
+            <div class="container">
+                <div class="product-content">
+                    <div class="product-content-left">
+                        <div class="product-content-left-img">
+                            <img src="https://4rau.vn/upload/hinhthem/prospectorspomadegoldrush1-38106283_250x250.jpg"
+                                alt="">
+                        </div>
+                        <div class="product-content-left-thumbnail">
+                            <img src="https://4rau.vn/upload/hinhthem/q8tbazp6rwapswbpemusgold1-96674865_250x250.png"
+                                alt="">
+                            <img src="https://4rau.vn/upload/hinhthem/prospectorspomadegoldrush45ozopenpomadeshop-83772767_250x250.png"
+                                alt="">
+                            <img src="https://4rau.vn/upload/hinhthem/prospectorspomadegoldrush1-38106283_250x250.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="product-content-right">
+                        <div class="product-name">
+                            <h2>PROSPECTORS GOLD RUSH</h2>
+                        </div>
+                        <div class="product-price">
+                            <p>390.000 VND</p>
+                        </div>
+                        <div class="product-size">
+                            <span >SIZE: </span>
+                            <div class="size">
+                                <span onclick="choose_size(0)">130 gram</span>
+                                <span onclick="choose_size(1)">210 gram</span>
+                            </div>
+                        </div>
+                        <div class="product-quantity">
+                            <p>SỐ LƯỢNG: </p>
+                            <input onchange="change_price(this)" type="number" value="1" min="1">
+                        </div>
+                        <p class="choose_size" style="color: red;">Vui lòng chọn size</p>
+                        <div class="product-button">
+                            <button>ADD TO CART</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-title">
+                                <div onclick="change_info(0)" class="product-info-title-name">
+                                    <p>Thương hiệu</p>
+                                </div>
+                                <div onclick="change_info(1)" class="product-info-title-name default_pro_info_title">
+                                    <p>Chi tiết</p>
+                                </div>
+                                <div onclick="change_info(2)" class="product-info-title-name">
+                                    <p>Đánh giá</p>
+                                </div>
+                            </div>
+                            <div class="product-info-content">
+                                <div class="product-info-content-brand" style="display: none;">
+                                    Thương hiệu Prospectors Pomade đến từ Mỹ đã du nhập vào Việt Nam từ khá lâu nhưng có
+                                    lẽ
+                                    là đến thời điểm hiện tại thì nó mới bắt đầu được nhắc đến do trào lưu pomade đã dần
+                                    dà
+                                    làm quen được với các dân chơi tóc tai tại Việt Nam, không thể nào bỏ qua được
+                                    thương
+                                    hiệu pomade với các sản phẩm full line đầy đủ các dòng sản phẩm riêng biệt với từng
+                                    chất
+                                    tóc khác nhau.
+                                </div>
+                                <div class="product-info-content-details">
+                                    <table>
+                                        <tr>
+                                            <td>Tổng quan sản phẩm:</td>
+                                            <td>Một dòng sản phẩm gốc dầu xịn xò với mức giá cực kỳ hợp lý cho những
+                                                newbie trong làng chơi pomade.</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Mùi hương:</td>
+                                            <td>mùi gỗ nam tính, tươi mới</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Độ giữ nếp: </td>
+                                            <td>8.5/10 dễ dàng restyle </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Cảm giác khi apply:</td>
+                                            <td>pomade gốc dầu có chứa tinh chất cây dầu gai cùng các loại vitamin như:
+                                                Vitamin E, Vitamin A</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Độ bóng:</td>
+                                            <td> tự nhiên, thích hợp sử dụng hàng ngày</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Kiểu tóc phù hợp:</td>
+                                            <td>Slickback, Sidepart, Comb Over, Pompadour,...</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Khả năng gội rửa:</td>
+                                            <td>dễ dàng trong lần gội đầu tiên.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="product-info-content-review" style="display: none;">
+                                    Scent (mùi hương):
+
+                                    Mình sẽ gọi nó là mùi ông già. Nó là mùi của sự hoài cổ, xạ hương và sạch sẽ. Đó là
+                                    cách
+                                    tốt nhất tôi có thể tổng hợp những gì tôi nhận được từ pomade.
+
+                                    Texture
+
+                                    Chất sáp rất mịn, nhưng nó dày hơn một chút. Bạn chắc chắn có thể nói rằng nó là một
+                                    loại pomade gốc nước từ độ ẩm của nó, tuy nhiên, có một độ mỏng do các thành phần
+                                    dầu.
+
+                                    Application (khả năng apply lên tóc)
+
+                                    2-3 đốt đầu ngón tay để giữ tóc chắc chắn. Nó mượt mà và dễ dàng chải cả trên tóc
+                                    ướt và
+                                    khô.
+
+                                    Slickness ( khả năng chải )
+
+                                    Hiệu suất cả ngày vững chắc từ các Prospectors. Độ bóng mượt không ở bất kỳ đâu gần
+                                    với
+                                    một loại pomade gốc dầu, nhưng bạn sẽ có được tất cả các vết bẩn được thuần hóa và
+                                    giải
+                                    quyết. Tuy nhiên, những sợi tóc ngắn hơn của tôi đã nhô ra.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-related">
+            <div class="product-related-title">
+                <p>SẢN PHẨM LIÊN QUAN</p>
+            </div>
+            <div class="product-related-content">
+                <div class="product-related-item">
+                    <img src="https://4rau.vn/upload/sanpham/prospectors_pomade_iron_ore_front_14oz_grande0720_250x250.jpg"
+                        alt="">
+                    <h3>PROSPECTORS IRON ORE</h3>
+                    <p>
+                        Giá:
+                        <span>390.000 VND</span>
+                    </p>
+                </div>
+                <div class="product-related-item">
+                    <img src="https://4rau.vn/upload/sanpham/prospectors_pomade_iron_ore_front_14oz_grande0720_250x250.jpg"
+                        alt="">
+                    <h3>PROSPECTORS IRON ORE</h3>
+                    <p>
+                        Giá:
+                        <span>390.000 VND</span>
+                    </p>
+                </div>
+                <div class="product-related-item">
+                    <img src="https://4rau.vn/upload/sanpham/prospectors_pomade_iron_ore_front_14oz_grande0720_250x250.jpg"
+                        alt="">
+                    <h3>PROSPECTORS IRON ORE</h3>
+                    <p>
+                        Giá:
+                        <span>390.000 VND</span>
+                    </p>
+                </div>
+                <div class="product-related-item">
+                    <img src="https://4rau.vn/upload/sanpham/prospectors_pomade_iron_ore_front_14oz_grande0720_250x250.jpg"
+                        alt="">
+                    <h3>PROSPECTORS IRON ORE</h3>
+                    <p>
+                        Giá:
+                        <span>390.000 VND</span>
+                    </p>
+                </div>
+                <div class="product-related-item">
+                    <img src="https://4rau.vn/upload/sanpham/prospectors_pomade_iron_ore_front_14oz_grande0720_250x250.jpg"
+                        alt="">
+                    <h3>PROSPECTORS IRON ORE</h3>
+                    <p>
+                        Giá:
+                        <span>390.000 VND</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="../script.js"></script>
+
+</html>
