@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #111;
+    line-height: 1.15;
+    background-image: url('https://img.freepik.com/free-photo/vintage-wooden-table-with-beard-shaping-salon-tools_53876-127084.jpg?w=2000');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.headline {
+    text-align: center;
+    padding: 100px 0;
+    margin: 20px 0 40px 0;
+}
+
+.slideshow {
+    list-style-type: none;
+}
+
+/** SLIDESHOW **/
+.slideshow,
+.slideshow:after {
+    top: -16px;
+    /*Not sure why I needed this fix*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    z-index: 0;
+}
+
+.slideshow li span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 30s linear infinite 0s;
+}
+
+
+
+.slideshow li:nth-child(1) span {
+    background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5bfa14d04ae3429879830ee4_home-hero.jpg");
+}
+
+.slideshow li:nth-child(2) span {
+    background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5c00c9ecd82b40364fc97f4b_bridge.jpg");
+    animation-delay: 6s;
+}
+
+.slideshow li:nth-child(3) span {
+    background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5c00c9963ea913260bb41b0e_powerlines.jpg");
+    animation-delay: 12s;
+}
+
+.slideshow li:nth-child(4) span {
+    background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5bfa14d04ae3429879830ee4_home-hero.jpg");
+    animation-delay: 18s;
+}
+
+.slideshow li:nth-child(5) span {
+    background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5c00c9963ea913260bb41b0e_powerlines.jpg");
+    animation-delay: 24s;
+}
+
+
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+
+    8% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+
+    17% {
+        opacity: 1
+    }
+
+    25% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+
+@keyframes titleAnimation {
+    0% {
+        opacity: 0
+    }
+
+    8% {
+        opacity: 1
+    }
+
+    17% {
+        opacity: 1
+    }
+
+    19% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+
+.no-cssanimations .cb-slideshow li span {
+    opacity: 1;
+}
+
+.headline h1 {
+    font-size: 40px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: inherit;
+    display: inline-block;
+    color: #fff;
+    font-weight: 600;
+    background-color: black;
+    border-radius: 10px;
+}
+
+ul.products {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+ul.products li {
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+
+ul.products li img {
+    width: 100%;
+    height: 100%;
+}
+
+ul.products li .product-top {
+    position: relative;
+    overflow: hidden;
+}
+
+ul.products li .product-top .product-thumb {
+    display: block;
+}
+
+ul.products li .product-top .product-thumb {
+    width: 250px;
+    height: 250px;
+}
+
+ul.products li:hover .product-top .product-thumb img {
+    filter: opacity(70%);
+    cursor: pointer;
+}
+
+ul.products li .product-top a.buy-now {
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    background-color: #1f1f20;
+    color: #fff;
+    padding: 10px 0px;
+    position: absolute;
+    bottom: -36px;
+    width: 250px;
+    transition: 0.25s ease-in-out;
+    opacity: 0.85;
+}
+
+ul.products li:hover a.buy-now {
+    bottom: 0px;
+}
+
+ul.products li .product-info {
+    padding: 10px 0px;
+    text-align: center;
+}
+
+ul.products li .product-info a {
+    display: block;
+    text-decoration: none;
+}
+
+ul.products li .product-info a.product-cat {
+    font-size: 17px;
+    color: #dddddd;
+    padding: 3px 0px;
+    text-transform: uppercase;
+}
+
+ul.products li .product-info a.product-name {
+    color: white;
+    padding: 3px 0px;
+    font-size: 25px;
+    text-align: left;
+}
+
+ul.products li .product-info .product-price {
+    color: #d81e0a;
+    padding: 2px 0px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.pagination a {
+    color: white;
+    float: left;
+    padding: 12px 18px;
+    margin: 0 2px;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.pagination a.active {
+    background-color: #ddd;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}

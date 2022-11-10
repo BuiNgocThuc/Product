@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHECKOUT FORM</title>
+  <link rel="stylesheet" href="../css/form-checkout.css">
+  <script>
+    function save() {
+      var username = document.getElementById("username");
+      var phone = document.getElementById("phone");
+      var address = document.getElementById("address");
+      var email = document.getElementById("email");
+      if (username.value.trim() == '') {
+        alert('Username cannot be empty!!')
+      }
+      else if (phone.value.trim() == '') {
+        alert('Phone cannot be empty!!')
+      }
+      else if (address.value.trim() == '') {
+        alert('Address cannot be empty!!')
+      }
+      else {
+        alert('Buying successfully completed')
+      }
+    }
+    function enableBtn() {
+          var btn = document.querySelector(".field-input-btn")
+          var input = document.querySelector(".field-input")
+          if (input.value != "")
+            btn.classList.add("field-input-btn-enable")
+          else
+            btn.classList.remove("field-input-btn-enable")
+        }
+  </script>
+</head>
+
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,400&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      margin: 0 10%;
+    }
+
+    .wrapper {
+      width: 100%;
+    }
+
+    .container {
+      background-color: #9F7150;
+      width: 50%;
+      height: 100vh;
+      padding: 30px;
+
+    }
+
+    .container input,
+    textarea,
+    select {
+      font-family: 'Open Sans', sans-serif;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 10px;
+      display: flex;
+      /* flex-grow: 1; */
+      border: 2px solid #333333;
+      width: 100%;
+
+    }
+
+    .container h1 {
+      font-size: 2.0em;
+      font-family: 'Open Sans', sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      height: 40px;
+      color: #fff;
+      background-color: #111;
+      margin-top: 10px;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+    }
+
+    .space-between {
+      margin: 8px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sidebar {
+      width: 50%;
+      margin-left: 20px;
+    }
+
+    .product {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .product-table,
+    .fieldset,
+    .order-summary-section {
+      padding: 20px 0;
+      border-bottom: 1px solid rgb(128, 128, 128, 0.5);
+      display: block;
+      position: relative;
+    }
+
+    .product-thumbnail-wrapper {
+      position: relative;
+    }
+
+    .product-thumbnail-quantity {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #008573;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      color: white;
+      text-align: center;
+    }
+
+    .product-description {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid rgb(128, 128, 128, 0.5);
+    }
+
+    .product-description span:nth-child(1){
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .product-price {
+      position: absolute;
+      right: 0;
+    }
+
+    .field-input-btn-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .field-input-wrapper{
+      width: 100%;
+    }
+
+    .field-label {
+      /* margin-bottom: 5px; */
+      display: none;
+    }
+
+
+    .field-input {
+      width: 100%;
+      height: 50px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+
+    .field-input-btn {
+      background-color: rgb(128, 128, 128, 0.5);
+      border: 3px solid rgb(128, 128, 128);
+      margin: 10px 0 10px 20px;
+      width: 30%
+    }
+
+
+    .field-input-btn-enable {
+      background-color: black;
+    }
+
+    .total-line-table {
+      width: 100%;
+      text-transform: capitalize;
+    }
+
+    .total-line-table td:first-child {
+      font-weight: bold;
+    }
+    .total-line-table td:nth-child(2) {
+      width: 50%;
+      text-align: right;
+    }
+
+    .payment-due-currency{
+      font-size: 14px;
+      color: #969696;
+      margin-right: 5px;
+    }
+    .payment-due-price {
+      color: #4b4b4b;
+      font-size: 25px
+    }
+    .visually-hidden {
+      display: none;
+    }
+  </style>
+  <div class="container">
+    <h1>customer information</h1>
+    <form action="" method="">
+      <div class="space-between">
+        <label for="username"></label>
+        <input type="text" name="username" id="username" placeholder="Username">
+      </div>
+      <div class="space-between">
+        <label for="phone"></label>
+        <input type="text" name="phone" id="phone" placeholder="Phone Number">
+      </div>
+      <div class="space-between">
+        <label for="address"></label>
+        <input type="text" name="address" id="address" placeholder="Address">
+      </div>
+      <div class="space-between">
+        <label for="email"></label>
+        <input type="email" name="email" id="email" placeholder="Email">
+      </div>
+      <div class="space-between">
+        <label for="payments"></label>
+        <select id="payments" name="payments">
+          <option value="">Chọn hình thức thanh toán</option>
+          <option value="transfer">--Chuyển khoản</option>
+          <option value="cash">--Tiền mặt</option>
+        </select>
+      </div>
+      <div class="flex">
+        <label for="note"></label>
+        <textarea name="note" id="note" rows="5" cols="50" placeholder="Note..."></textarea>
+      </div>
+      <button onclick="save()">Đặt hàng</button>
+    </form>
+  </div>
+
+  <div class="sidebar">
+    <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- product-list -->
+    <div class="product-table">
+      <div class="product">
+        <div class="product-image">
+          <div class="product-thumbnail">
+            <div class="product-thumbnail-wrapper">
+              <img style="width: 150px;" class="product-thumbnail-image" alt=""
+                src="https://cdn.shopify.com/s/files/1/0693/3793/products/Prospectors_Pomade_Gold_Rush_1.5oz_Open_850x.jpg?v=1566841847">
+              <span class="product-thumbnail-quantity" aria-hidden="true">1</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-description">
+          <span class="product-description-name order-summary-emphasis">Prospectors Gold Rush POMADE</span>
+          <span class="product-size" style="color: #969696">113 gram</span>
+        </div>
+        <div class="product-price">
+          <span class="order-summary-emphasis" style="text-align: right;">380,000₫</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- discount-button -->
+    <div class="fieldset">
+      <div class="field">
+        <div class="field-input-btn-wrapper">
+          <div class="field-input-wrapper">
+            <label class="field-label" for="discount.code">Mã giảm giá</label>
+            <input oninput="enableBtn()" placeholder="Mã giảm giá" class="field-input" data-discount-field="true"
+              autocomplete="false" autocapitalize="off" spellcheck="false" size="30" type="text" id="discount.code"
+              name="discount.code" value="">
+          </div>
+          <button type="submit" class="field-input-btn btn btn-default btn-disabled">
+            <span class="btn-content">Sử dụng</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------------------------------- total-price-------------------------------------------------------------- -->
+    <div class="order-summary-section order-summary-section-total-lines payment-lines"
+      data-order-summary-section="payment-lines">
+      <table class="total-line-table">
+        <tbody>
+          <tr class="total-line total-line-subtotal">
+            <td class="total-line-name">Tạm tính</td>
+            <td class="total-line-price">
+              <span class="order-summary-emphasis" data-checkout-subtotal-price-target="38000000">
+                380,000₫
+              </span>
+            </td>
+          </tr>
+          <tr class="total-line total-line-shipping">
+            <td class="total-line-name">Phí vận chuyển</td>
+            <td class="total-line-price">
+              <span class="order-summary-emphasis" data-checkout-total-shipping-target="0">--</span>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot class="total-line-table-footer">
+          <tr class="total-line">
+            <td class="total-line-name payment-due-label">
+              <span class="payment-due-label-total">Tổng cộng</span>
+            </td>
+            <td class="total-line-name payment-due">
+              <span class="payment-due-currency">VND</span>
+              <span class="payment-due-price" data-checkout-payment-due-target="38000000">
+                380,000₫
+              </span>
+              <span class="checkout_version" display:none="" data_checkout_version="0">
+              </span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

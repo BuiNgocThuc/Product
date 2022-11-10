@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0 10%;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.container {
+    background-color: #9F7150;
+    width: 50%;
+    height: 100vh;
+    padding: 30px;
+
+}
+
+.container input,
+textarea,
+select {
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    /* flex-grow: 1; */
+    border: 2px solid #333333;
+    width: 100%;
+
+}
+
+.container h1 {
+    font-size: 2.0em;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color: #111;
+    margin-top: 10px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+.space-between {
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    width: 50%;
+    margin-left: 20px;
+}
+
+.product {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.product-table,
+.fieldset,
+.order-summary-section {
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.5);
+    display: block;
+    position: relative;
+}
+
+.product-thumbnail-wrapper {
+    position: relative;
+}
+
+.product-thumbnail-quantity {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #008573;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+}
+
+.product-description {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgb(128, 128, 128, 0.5);
+}
+
+.product-description span:nth-child(1) {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-price {
+    position: absolute;
+    right: 0;
+}
+
+.field-input-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.field-input-wrapper {
+    width: 100%;
+}
+
+.field-label {
+    /* margin-bottom: 5px; */
+    display: none;
+}
+
+
+.field-input {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.field-input-btn {
+    background-color: rgb(128, 128, 128, 0.5);
+    border: 3px solid rgb(128, 128, 128);
+    margin: 10px 0 10px 20px;
+    width: 30%
+}
+
+
+.field-input-btn-enable {
+    background-color: black;
+}
+
+.total-line-table {
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.total-line-table td:first-child {
+    font-weight: bold;
+}
+
+.total-line-table td:nth-child(2) {
+    width: 50%;
+    text-align: right;
+}
+
+.payment-due-currency {
+    font-size: 14px;
+    color: #969696;
+    margin-right: 5px;
+}
+
+.payment-due-price {
+    color: #4b4b4b;
+    font-size: 25px
+}
+
+.visually-hidden {
+    display: none;
+}
