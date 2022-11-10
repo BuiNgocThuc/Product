@@ -13,7 +13,7 @@ function change_info(nth){
     var info_titles = document.querySelectorAll(".product-info-title > *")
     for(var i = 0; i < info_titles.length; i++)
         info_titles[i].style.border = "none"
-    info_titles[nth].style.borderBottom = "3px solid #9F7150" 
+    info_titles[nth].style.borderBottom = "3px solid #9F7150"
     var infos = document.querySelectorAll(".product-info-content > *")
     for(var i = 0; i < infos.length; i++)
         infos[i].style.display = "none"
@@ -45,4 +45,68 @@ function showSlides() {
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+
+var currentPageProduct = 1;
+function loadPage() {
+    showSlides();
+    showCurrentProduct()
+    showCurrentDot()
+}
+
+function showCurrentProduct() {
+    var productContainer = document.querySelector(".category .products")
+    productContainer.innerHTML = ``
+    for (var i = (currentPageProduct - 1) * 8; i < currentPageProduct * 8; i++) {
+        productContainer.innerHTML +=
+        `<li>
+            <div class="product-item">
+                <div class="product-top">
+                    <div href="" class="product-thumb">
+                        <img src="${productData[i].url}"
+                            alt="product">
+                    </div>
+                    <a href="" class="buy-now">Mua ngay</a>
+                    <!-- Mua Ngay -->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">${productData[i].category}</a>
+                    <a href="" class="product-name">${productData[i].name}</a>
+                    <div class="product-price">${productData[i].price}</div>
+                </div>
+            </div>
+        </li>`
+    }
+}
+function showCurrentDot() {
+    var nDot = Math.ceil(productData.length / 8)
+    var paginationContainer = document.querySelector(".pagination")
+    paginationContainer.innerHTML = ``
+    paginationContainer.innerHTML += `<a onclick="leftPagination(this)">«</a>`
+    for (var i = 1; i <= nDot; i++)
+        paginationContainer.innerHTML +=`<a onclick="changePagination(this)">${i}</a>`
+    paginationContainer.innerHTML += `<a onclick="rightPagination(this)">»</a>`
+    var dots = document.querySelectorAll(".pagination > *")
+    dots[currentPageProduct].classList.add("active")
+}
+
+function changePagination(currentDot) {
+    currentPageProduct = parseInt(currentDot.innerHTML)
+    showCurrentDot()
+    showCurrentProduct()
+}
+
+function leftPagination() {
+    if (currentPageProduct == 1)
+        return
+    currentPageProduct -= 1
+    showCurrentDot()
+    showCurrentProduct()
+}
+function rightPagination() {
+    if (currentPageProduct == Math.ceil(productData.length / 8))
+        return
+    currentPageProduct += 1
+    showCurrentDot()
+    showCurrentProduct()
 }

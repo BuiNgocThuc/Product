@@ -1,4 +1,4 @@
-[
+var productData = [
     {
         "category" : "BEARD & SHAVE",
         "name" : "REUZEL ASTRINGENT FOAM",

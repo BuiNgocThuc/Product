@@ -190,8 +190,17 @@ ul.products li .product-info .product-price {
 
 .pagination a.active {
   background-color: #ddd;
+  color: black;
 }
 
-.pagination a:hover:not(.active) {
+.pagination a:hover {
   background-color: #ddd;
+  color: black;
+  transform: translateY(-10px);
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+.pagination a:first-child:hover,
+.pagination a:last-child:hover {
+  transform: none;
 }
