@@ -83,6 +83,49 @@ body {
   border-radius: 10px;
 }
 
+.tool {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 15px 25px;
+  font-weight: inherit;
+  font-size: 15px;
+}
+.tool .filter {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.tool .filter form span {
+  font-size: 30px;
+}
+
+.tool .search {
+  background-color: white;
+  flex: 1;
+  width: 100%;
+  height: 30px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tool .search input{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+}
+
+.tool .search button {
+  background-color: black;
+  width: 80px;
+  height: 30px;
+  border: none;
+}
 ul.products {
   list-style: none;
   display: flex;
@@ -143,6 +186,7 @@ ul.products li:hover a.buy-now {
 
 ul.products li .product-info {
   padding: 10px 0px;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -153,7 +197,7 @@ ul.products li .product-info a {
 
 ul.products li .product-info a.product-cat {
   font-size: 17px;
-  color: #dddddd;
+  color: #7e3939;
   padding: 3px 0px;
   text-transform: uppercase;
 }

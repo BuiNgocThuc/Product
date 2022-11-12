@@ -20,13 +20,30 @@
             <h1>SẢN PHẨM</h1>
         </div>
         <div id="wrapper">
-            <div class="filter">
-                <span>Sắp xếp theo</span>
-                <div class="filter category">Phân loại</div>
-                <div class="filter price">Giá</div>
-            </div>
-            <div class="search">
-                <input type="text" placeholder="tìm kiếm">
+            <div class="tool">
+                <div class="filter">
+                    <form action="">
+                        <label>Phân loại:</label>
+                        <select name="category" class="filter category">
+                            <option value="POMADE">POMADE</option>
+                            <option value="SKINCARE">SKINCARE</option>
+                            <option value="BODY & HAIR">BODY & HAIR</option>
+                            <option value="BEARD & SHAVE">BEARD & SHAVE</option>
+                        </select> <br>
+                        <label>Giá:</label>
+                        <input type="text" class="filter price" placeholder="&#8363; TỪ">
+                        <span>-</span>
+                        <input type="text" class="filter price" placeholder="&#8363; ĐẾN">
+                    </form>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="tìm kiếm">
+                    <button class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
             <div class="category">
                 <ul class="products">
