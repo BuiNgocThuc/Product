@@ -154,9 +154,6 @@ ul.products li .product-top {
 
 ul.products li .product-top .product-thumb {
   display: block;
-}
-
-ul.products li .product-top .product-thumb {
   width: 250px;
   height: 250px;
 }
@@ -187,7 +184,6 @@ ul.products li:hover a.buy-now {
 
 ul.products li .product-info {
   padding: 10px 0px;
-  flex-direction: column;
   text-align: center;
 }
 
@@ -205,14 +201,19 @@ ul.products li .product-info a.product-cat {
 
 ul.products li .product-info a.product-name {
   color: white;
-  padding: 3px 0px;
+  padding: 5px 0px;
   font-size: 25px;
-  text-align: left;
+  height: 80px;
+  /* display: table-cell; 
+  vertical-align: middle; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ul.products li .product-info .product-price {
   color: #d81e0a;
-  padding: 2px 0px;
+  
   font-weight: 600;
   font-size: 25px;
 }
