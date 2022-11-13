@@ -59,7 +59,7 @@ function createList(category) {
       if (productData[i].category.toUpperCase() == category)
         currentProductData.push(productData[i]);
 }
-function loadPage() {
+function loadPageCategory() {
   showSlides();
   createList("ALL");
   console.log(currentProductData);
@@ -77,7 +77,7 @@ function showCurrentProduct() {
   console.log((currentPageProduct - 1) * 8, to);
   for (var i = (currentPageProduct - 1) * 8; i < to; i++) {
     productContainer.innerHTML += `<li>
-            <div class="product-item">
+            <div class="product-item" onclick="goToProductInfo(${i})">
                 <div class="product-top">
                     <div href="" class="product-thumb">
                         <img src="${currentProductData[i].url}"
@@ -87,9 +87,15 @@ function showCurrentProduct() {
                     <!-- Mua Ngay -->
                 </div>
                 <div class="product-info">
-                    <a href="" class="product-cat">${currentProductData[i].category}</a>
-                    <a href="" class="product-name">${currentProductData[i].name}</a>
-                    <div class="product-price">${currentProductData[i].price}</div>
+                    <a href="" class="product-cat">${
+                      currentProductData[i].category
+                    }</a>
+                    <a href="" class="product-name">${
+                      currentProductData[i].name
+                    }</a>
+                    <div class="product-price">${numberWithCommas(
+                      currentProductData[i].price
+                    )} VND</div>
                 </div>
             </div>
         </li>`;
@@ -182,7 +188,26 @@ function searchByName() {
   showCurrentProduct();
   showCurrentDot();
 }
-
+function goToProductInfo(idProduct) {
+  console.log(idProduct);
+  console.log(currentProductData[idProduct]);
+  localStorage.setItem(
+    "currentProduct",
+    JSON.stringify(currentProductData[idProduct])
+  );
+  window.location.href = "product-info.html";
+}
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+function loadPageProductInfo() {
+  var product = JSON.parse(localStorage.getItem("currentProduct"));
+  console.log(product);
+  document.querySelector(".product-content-left-img img").src = product.url;
+  document.querySelector(".product-name h2").innerHTML = product.name;
+  document.querySelector(".product-price p").innerHTML =
+    numberWithCommas(product.price) + " VND";
+}
 //mouse-move
 $(function () {
   var zoom = function (elm) {
