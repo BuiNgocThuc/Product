@@ -88,6 +88,10 @@ function showCurrentDot() {
     paginationContainer.innerHTML += `<a onclick="rightPagination(this)">»</a>`
     var dots = document.querySelectorAll(".pagination > *")
     dots[currentPageProduct].classList.add("active")
+    if (currentPageProduct == 1)
+        dots[0].style.visibility = "hidden"
+    if (currentPageProduct == nDot)
+        dots[nDot + 1].style.visibility = "hidden"
 }
 
 function changePagination(currentDot) {
