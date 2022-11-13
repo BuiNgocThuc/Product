@@ -139,7 +139,7 @@ ul.products li {
   padding-right: 15px;
   box-sizing: border-box;
   margin-bottom: 30px;
-  height: 370px;
+  height: 400px;
 }
 
 ul.products li img {
@@ -221,6 +221,7 @@ ul.products li .product-info .product-price {
   display: flex;
   justify-content: center;
   padding: 15px;
+  user-select: none;
 }
 
 .pagination a {
