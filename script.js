@@ -70,7 +70,12 @@ function loadPage() {
 function showCurrentProduct() {
   var productContainer = document.querySelector(".category .products");
   productContainer.innerHTML = ``;
-  for (var i = (currentPageProduct - 1) * 8; i < currentPageProduct * 8; i++) {
+  var to;
+  if (currentPageProduct * 8 > currentProductData.length)
+    to = currentProductData.length;
+  else to = currentPageProduct * 8;
+  console.log((currentPageProduct - 1) * 8, to);
+  for (var i = (currentPageProduct - 1) * 8; i < to; i++) {
     productContainer.innerHTML += `<li>
             <div class="product-item">
                 <div class="product-top">
@@ -91,6 +96,7 @@ function showCurrentProduct() {
   }
 }
 function showCurrentDot() {
+  if (currentProductData.length == 0) return;
   var nDot = Math.ceil(currentProductData.length / 8);
   var paginationContainer = document.querySelector(".pagination");
   paginationContainer.innerHTML = ``;
@@ -123,13 +129,60 @@ function rightPagination() {
   showCurrentProduct();
 }
 
-function filterByCategory(event) {
-  console.log(event.value);
-  createList(event.value);
+function filterByCategory() {
+  clearPrice();
+  currentPageProduct = 1;
+  var categogy = document.querySelector(".filter .category").value;
+  createList(categogy);
   console.log(currentProductData);
   showCurrentDot();
   showCurrentProduct();
 }
+function filterByPrice() {
+  var categogy = document.querySelector(".filter .category").value;
+  createList(categogy);
+  currentPageProduct = 1;
+  min = parseInt(document.querySelector(".price.min").value);
+  max = parseInt(document.querySelector(".price.max").value);
+  if (!isNaN(max)) {
+    var tempProductData = [];
+    for (var i = 0; i < currentProductData.length; i++)
+      if (
+        parseInt(currentProductData[i].price) >= min &&
+        parseInt(currentProductData[i].price) <= max
+      )
+        tempProductData.push(currentProductData[i]);
+    if (tempProductData.length != 0) currentProductData = tempProductData;
+  }
+  showCurrentProduct();
+  showCurrentDot();
+}
+function clearPrice() {
+  document.querySelector(".price.min").value = "";
+  document.querySelector(".price.max").value = "";
+}
+function searchByName() {
+  currentPageProduct = 1;
+  clearPrice();
+  createList("ALL");
+  document.querySelector(".filter .category").value = "ALL";
+
+  var name = document.querySelector(".search input").value;
+  console.log(name);
+  var tempProductData = [];
+  console.log(currentProductData);
+  for (var i = 0; i < currentProductData.length; i++) {
+    if (currentProductData[i].name.search(name.toUpperCase()) != -1)
+      tempProductData.push(currentProductData[i]);
+  }
+  console.log(tempProductData);
+  if (tempProductData.length != 0) currentProductData = tempProductData;
+  console.log(currentProductData);
+
+  showCurrentProduct();
+  showCurrentDot();
+}
+
 //mouse-move
 $(function () {
   var zoom = function (elm) {

@@ -24,7 +24,7 @@
                 <div class="filter">
                     <form action="">
                         <label>Phân loại:</label>
-                        <select name="category" class="filter category" onchange="filterByCategory(this)">
+                        <select name="category" class="filter category" onchange="filterByCategory()">
                             <option checked value="ALL">ALL</option>
                             <option value="POMADE">POMADE</option>
                             <option value="SKIN CARE">SKIN CARE</option>
@@ -32,14 +32,15 @@
                             <option value="BEARD & SHAVE">BEARD & SHAVE</option>
                         </select> <br>
                         <label>Giá:</label>
-                        <input type="text" class="filter price" placeholder="&#8363; TỪ">
+                        <input type="text" class="filter price min" placeholder="&#8363; TỪ">
                         <span>-</span>
-                        <input type="text" class="filter price" placeholder="&#8363; ĐẾN">
+                        <input type="text" class="filter price max" onchange="filterByPrice()"
+                            placeholder=" &#8363; ĐẾN">
                     </form>
                 </div>
                 <div class="search">
                     <input type="text" placeholder="tìm kiếm">
-                    <button class="search-btn">
+                    <button class="search-btn" onclick="searchByName()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search"
                             viewBox="0 0 16 16">
                             <path
