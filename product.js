@@ -320,3 +320,21 @@ var productData = [
       "Hydrating – Intensifying – Smoothing. Step #3 of your TAT routine. Hydrating gel that creates a moisture barrier on the skin while quickly enhancing the color of your tattoo.",
   },
 ];
+
+var productDetails = [
+  {
+    details: "-Tăng cường hiệu năng - độ giữ nếp cả ngày mà vẫn cho mái tóc đẹp, một vẻ ngoài tự nhiên. Nó cho một lớp bao bọc hoàn hảo để tăng độ giữ nếp và kết cấu và nó sẽ giúp bảo vệ tóc khỏi sức nóng của sấy khô. - Thấm hút mồ hôi nhẹ: - Tăng độ giữ nếp, độ phồng tự nhiên.   - Phóng đại kết cấu tự nhiên.   - Cung cấp độ khô tự nhiên.   - Không làm nặng tóc, mang lại độ bóng mờ giúp tóc có thêm sức sống.   - Có thể sử dụng trên tóc khô hoặc tóc ẩm vừa dùng khăn khô"
+  },
+  {
+    details: "Giữ nếp cực cao (Heavy/Strong Hold) 10/10 ( 12 - 14 tiếng )     Có độ bóng vừa phải(Medium shine)    Mùi hương: Mùi Vani dịu nhẹ, dễ chịu    Texture(tạo lọn tóc đan xen): Ổn định    Khả năng gội rửa trung bình( 2- 3 lần )."
+  },
+  {
+    details: "Ocean:  mùi hương tươi mát, sảng khoái của tinh dầu gỗ trắc xanh, vị biển và cỏ vetiver   Marble:  mùi hương sảng khoái của nước biển, mùi gỗ và hoa phong lữ  Forest: mùi hương tinh tế thú vị của cam bergamot, gỗ tuyết tùng, cây xô thơm (sage)  Clean Slate: mùi hương tươi mát của cam quýt, cây xô thơm và gỗ đàn hương  Paris: mùi hương tinh tế gỗ tuyết tùng, vỏ cam và một ít xạ hương  Suede: mùi hương cổ điển của da lộn, tuyết tùng và gỗ sồi  Whitewater Rush: mùi hương quyết rũ của cam bergamot và gỗ tuyết tùng trắng. "
+  },
+  {
+    details: "Tăng độ giữ nếp cho mái tóc    Tạo độ phồng tự nhiên / được độ Volume theo ý muốn    Cung cấp độ ẩm cho tóc / giúp mái tóc không bị khô xơ    Bảo vệ tóc khỏi nhiệt độ cao của máy sấy khi sấy tóc    Mùi hương: sự kết hợp của hương táo ngọt dịu & hương bạc hà mát lạnh    *Cực kỳ tốt cho tóc, bảo vệ tóc không bị nhiệt máy sấy làm hư hại và ngược lại giúp cho mái tóc của bạn khỏe và mượt hơn    * Giúp mái tóc khó vào nếp nhất trở nên dễ dàng hơn khi sử dụng sản phẩm"
+  },
+  {
+    details: " Mật ong Manuka Honey tự nhiên từ New Zealand, có chứa dồi dào chất bổ như chất khoáng, vitamin và enzyme giúp lành vết thương hay làn da đang bị bong tróc, nổi vẩy. Chất này còn giúp giữ độ ẩm cao cho làn da.    - Rosepene là một trong những nguyên liệu làm nên tên tuổi của Trilogy với tính năng giúp làm ẩm, làm lành các khuyết điểm trên da, khả năng siêu chống oxy hóa nhằm ngăn chặn các nguy cơ lão hóa da.    - Lavender (tinh dầu oải hương) ngoài mùi hương nổi tiếng, nó còn làm dịu da, se khít lỗ chân lông, cân bằng dầu và khử trùng trên da.    - Coconut oil (dầu dừa) chiết xuất tự nhiên từ phần thịt dừa khô, hoàn hảo trong các việc chống vi khuẩn xâm nhập da cũng như làm dịu da khỏi các tổn thương trên bề mặt. Ngoài ra, với thành phần giúp cung cấp dầu và tinh chất giúp nuôi dưỡng da, dầu dừa còn giúp da giữ nước tốt.    - Evening primrose oil (tinh dầu hoa anh thảo) có hàm lượng gamma-linolenic (GLA) cao, phù hợp cho làn da khô, da xạm, da bị tổn thương cũng như hoàn toàn an toàn cho làn da nhạy cảm. Ngoài ra, GLA là tinh chất phù hợp nhất trong việc nuôi dưỡng và tái tạo lại biểu bì da."
+  },
+];

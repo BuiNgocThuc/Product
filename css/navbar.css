@@ -1,0 +1,236 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+.nav {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav .nav-container {
+    z-index: 111;
+    position: absolute;
+    background: transparent;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0 10%;
+    transition: top 0.3s linear;
+}
+
+.nav-logo {
+    width: 15%;
+}
+
+.nav-logo img {
+    width: 150px;
+    padding: 10px;
+}
+
+.navbar {
+    width: 85%;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.navbar .social-icon {
+    width: 35%;
+    text-align: right;
+}
+
+.navbar .list {
+    width: 65%;
+    text-align: center;
+}
+
+.navbar ul li a,
+.navbar .list li ul li {
+    font-size: 24px;
+    color: #eee;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.25s ease-in;
+}
+
+.navbar .social-icon i {
+    font-size: 24px;
+}
+
+.navbar li {
+    padding: 30px;
+    display: inline-block;
+    transition: 0.25s ease-in;
+    position: relative;
+}
+
+.navbar li:hover {
+    color: #9f7150;
+}
+
+.navbar ul li a:hover {
+    color: #9f7150 !important;
+}
+
+.navbar .list li ul {
+    position: absolute;
+    top: 100%;
+    left: 28px;
+    width: 280px;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff55;
+    text-align: left;
+    display: none;
+}
+
+.navbar .list li ul li {
+    width: 100%;
+    /* white-space: nowrap; */
+}
+
+.navbar .list li ul li:hover {
+    color: #333333;
+    background-color: white;
+    /* width: 100%; */
+}
+
+.navbar li:hover>ul {
+    display: block;
+}
+
+.navbar .list ul li {
+    width: calc(100% - 60px);
+    text-align: left;
+    display: block;
+}
+
+.hero {
+    display: none;
+}
+
+.hero .line {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    margin: 3px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width: 1540px){
+    .nav .nav-container{
+        padding: 0 5%;
+    }
+    .navbar ul li a,
+    .navbar .list li ul li{
+        font-size: 18px;
+    }
+    .navbar .list li ul{
+        width: 235px;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    .nav-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .navbar .list li {
+        opacity: 0;
+    }
+
+    .navbar .list {
+        background-color: #9f7150;
+        position: fixed;
+        top: calc(10vh - 3px);
+        right: 0;
+        width: 100vw;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        /* border-radius: 1rem 0 0 0;s */
+        /* z-index: 10000; */
+        /* display: block !important; */
+    }
+
+    .navbar .list li ul li {
+        display: none;
+        /* z-index: 11111; */
+    }
+
+    .navbar .social-icon {
+        display: none;
+    }
+
+    .hero {
+        display: block;
+        padding-top: 5%;
+        padding-block: 5%;
+        padding-left: 10% ;
+    }
+}
+
+.navbar ul.list.active {
+    color: white;
+    font-size: 30px;
+    /* display: block !important; */
+    transform: translateX(0%);
+}
+
+.navbar ul.list.active li a:hover {
+    /* background-color: red; */
+    color: #333333 !important;
+}
+
+@keyframes NavFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+        border-bottom: none;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+        font-size: 30px;
+        /* border-bottom: 1px solid #333333; */
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+
+.nav .nav-container.active {
+    position: fixed;
+    /* top: 0; */
+    background-color: black !important;
+    animation: dropdown 0.3s linear alternate;
+    z-index: 20000;
+}
+
+@keyframes dropdown{
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
